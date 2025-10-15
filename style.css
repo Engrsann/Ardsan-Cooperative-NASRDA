@@ -1,0 +1,4 @@
+body {font-family: Arial, sans-serif; text-align: center; background: #f5fff9; color: #017a4d;}
+header {background: #017a4d; color: white; padding: 15px; border-radius: 0 0 20px 20px;}
+.logo {width: 80px; height: 80px;}
+button {background: #017a4d; color: white; border: none; padding: 10px 20px; border-radius: 10px; margin-top: 20px;}
