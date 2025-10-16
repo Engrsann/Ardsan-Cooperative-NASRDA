@@ -1,3 +1,1 @@
-self.addEventListener('install', e => {
-  console.log('Service Worker Installed');
-});
+self.addEventListener('install', event => {event.waitUntil(caches.open('ardsan-static-v1').then(cache => cache.addAll(['/index.html','/style.css','/script.js','/assets/logo.png'])));});self.addEventListener('fetch', event => {event.respondWith(caches.match(event.request).then(resp => resp || fetch(event.request)));});

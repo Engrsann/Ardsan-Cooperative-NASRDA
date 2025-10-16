@@ -1,21 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ardsan Cooperative</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ardsan Co-operative</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Ardsan Logo" class="logo">
-    <h1>Ardsan Co-operative</h1>
-  </header>
-  <main>
-    <h2>Welcome Member</h2>
-    <p>Your savings, loans, and commodities in one app.</p>
-    <button onclick="alert('Feature coming soon!')">Check Balance</button>
-  </main>
-  <script src="script.js"></script>
-</body>
-</html>
+<header class="topbar"><img src="assets/logo.png" class="logo" alt="logo"><div class="title">Ardsan Co-operative</div></header>
+<main class="container"><section class="welcome card"><h2 id="username">Welcome, Member</h2><p class="muted">Manage savings, loans and commodity purchases.</p>
+<div class="stats"><div class="stat"><div class="label">Savings</div><div class="value">₦<span id="savings">0.00</span></div></div>
+<div class="stat"><div class="label">Active Loan</div><div class="value" id="loanStatus">None</div></div>
+<div class="stat"><div class="label">Orders</div><div class="value" id="ordersCount">0</div></div></div>
+<div class="actions"><button id="checkBalanceBtn">Check Balance</button><button id="applyLoanBtn">Apply Loan</button><button id="orderBtn">Order Commodity</button></div></section>
+<section id="balancePanel" class="card hidden"><h3>Account Summary</h3><p><strong>Savings:</strong> ₦<span id="balSavings">0.00</span></p><p><strong>Loan:</strong> ₦<span id="balLoan">0.00</span></p><p><strong>Status:</strong> <span id="balStatus">Active</span></p><button onclick="closePanel('balancePanel')">Close</button></section>
+<section id="loanPanel" class="card hidden"><h3>Apply for Loan</h3><select id="loanType"><option>Emergency</option><option>Business</option><option>Long-term</option></select><input id="loanAmount" type="number" placeholder="Amount (₦)"><button id="submitLoan">Submit Application</button><button onclick="closePanel('loanPanel')">Cancel</button></section>
+<section id="orderPanel" class="card hidden"><h3>Order Commodity</h3><input id="itemName" placeholder="Item name"><input id="itemQty" type="number" placeholder="Quantity"><input id="itemPrice" type="number" placeholder="Unit price (₦)"><button id="submitOrder">Place Order</button><button onclick="closePanel('orderPanel')">Cancel</button></section>
+</main><footer class="foot">© 2025 Ardsan Co-operative</footer><script src="firebase.js"></script><script src="script.js"></script></body></html>
